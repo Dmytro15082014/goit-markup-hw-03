@@ -31,6 +31,7 @@ p {
 
 img{
     display: block;
+    max-width: 100%;
 }
 .container{
     max-width: 1158px;
@@ -44,14 +45,11 @@ header{
 }
 header .container{
     display: flex;
-    padding: 24px 15px;
     justify-content: space-between;
 }
 .line-nav {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
     gap: 76px;
 }
 
@@ -71,13 +69,13 @@ header .container{
 
 .line-nav-list, .line-address-list {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
     gap: 40px;
 }
 
 .nav-link {
+    display: block;
+    padding: 24px 0;
     font-weight: 500;
     color: #2e2f42;
 }
@@ -94,6 +92,8 @@ header .container{
 
 .addr-link {
     color: #434455;
+    display: block;
+    padding: 24px 0;
 }
 
 /* #endregion */
@@ -101,14 +101,7 @@ header .container{
 /* #region hero */
 .hero {
     background-color: #2e2f42;
-    padding: 188px 0px;
-}
-.hero .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 48px;
+    padding: 188px 0;
 }
 
 .hero-title {
@@ -117,7 +110,10 @@ header .container{
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
-    padding: 0 316px;
+    width: 496px;
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-btn {
@@ -129,6 +125,9 @@ header .container{
     letter-spacing: 0.04em;
     border-radius: 4px;
     padding: 16px 32px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-btn:hover, .hero-btn:focus{
@@ -137,13 +136,31 @@ header .container{
 /* #endregion */
 
 /* #region features */
-/* .features {} */
+.features{
+    padding: 120px 0;
+}
 
-/* .features-title {} */
+.features-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
-/* .features-list {} */
+.features-list {
+    display: flex;
+    gap: 24px;    
+}
 
-/* .features-item {} */
+.features-item {
+    width: calc((100% - 72px)/4);
+}
 
 .features-item-title {
     font-weight: 500;
@@ -151,6 +168,7 @@ header .container{
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 /* .features-item-text {} */
@@ -159,6 +177,8 @@ header .container{
 /* #region team */
 .team {
     background-color: #f4f4fd;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .team-title {
@@ -168,12 +188,24 @@ header .container{
     letter-spacing: 0.02em;
     text-transform: capitalize;
     text-align: center;
+    margin-bottom: 72px;
 }
 
-/* .team-list {} */
+.team-list {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
 
 .team-list-item {
     background-color: #ffffff;
+    width: calc((100% - 72px)/4);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.team-info{
+    padding: 32px 16px;
 }
 
 .team-list-title {
@@ -182,13 +214,20 @@ header .container{
     letter-spacing: 0.02em;
     line-height: 1.2;
     color: #2e2f42;
+    margin-bottom: 8px;
+    text-align: center;
 }
 
-/* .team-list-text {} */
+.team-list-text {
+    text-align: center;
+}
 /* #endregion */
 
 /* #region portfolio */
-/* .portfolio {} */
+.portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 
 .portfolio-title {
     font-size: 36px;
@@ -197,11 +236,19 @@ header .container{
     letter-spacing: 0.02em;
     text-transform: capitalize;
     text-align: center;
+    margin-bottom: 72px;
 }
 
-/* .portfolio-list {} */
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
 
-/* .portfolio-list-item {} */
+.portfolio-list-item {
+    width: calc((100%-48px)/3);
+}
 
 .portfolio-list-title {
     font-weight: 500;
@@ -209,6 +256,12 @@ header .container{
     line-height: 1.2;
     color: #2e2f42;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
+}
+.portfolio-info{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
 }
 
 /* .portfolio-list-text {} */
@@ -217,6 +270,8 @@ header .container{
 /* #region footer */
 .footer {
     background-color: #2e2f42;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 footer .logo-accent {
@@ -225,5 +280,7 @@ footer .logo-accent {
 
 .footer-text {
     color: #f4f4fd;
+    margin-top: 16px;
+    width: 264px;
 }
 /* #endregion */
