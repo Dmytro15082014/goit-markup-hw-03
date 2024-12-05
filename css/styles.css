@@ -40,17 +40,16 @@ img{
 }
 
 /* #region top-line */
-header{
+.page-header{
     border-bottom: 1px solid #e7e9fc;
 }
-header .container{
+.header-container{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 .line-nav {
     display: flex;
     align-items: center;
-    gap: 76px;
 }
 
 .logo {
@@ -61,6 +60,11 @@ header .container{
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: #4d5ae5;
+}
+.header-logo{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 76px;
 }
 
 .logo-accent {
@@ -88,6 +92,7 @@ header .container{
 
 .line-address {
     font-style: normal;
+    margin-left: auto;
 }
 
 .addr-link {
@@ -110,7 +115,7 @@ header .container{
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
-    width: 496px;
+    max-width: 496px;
     margin-bottom: 48px;
     margin-left: auto;
     margin-right: auto;
@@ -125,9 +130,12 @@ header .container{
     letter-spacing: 0.04em;
     border-radius: 4px;
     padding: 16px 32px;
+    border: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    min-width: 169px;
+    height: 56px;
 }
 
 .hero-btn:hover, .hero-btn:focus{
@@ -205,7 +213,7 @@ header .container{
 }
 
 .team-info{
-    padding: 32px 16px;
+    padding: 32px 0;
 }
 
 .team-list-title {
@@ -247,7 +255,7 @@ header .container{
 }
 
 .portfolio-list-item {
-    width: calc((100%-48px)/3);
+    width: calc((100% - 48px)/3);
 }
 
 .portfolio-list-title {
@@ -259,9 +267,8 @@ header .container{
     margin-bottom: 8px;
 }
 .portfolio-info{
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
 }
 
 /* .portfolio-list-text {} */
@@ -274,13 +281,17 @@ header .container{
     padding-bottom: 100px;
 }
 
+.footer-logo{
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
 footer .logo-accent {
     color: #f4f4fd;
 }
 
 .footer-text {
     color: #f4f4fd;
-    margin-top: 16px;
-    width: 264px;
+    max-width: 264px;
 }
 /* #endregion */
